@@ -4,17 +4,19 @@
 
 <title>Equinox Coding</title>
 <div class="h-fit">
-    <slot />
-    <div class="w-full h-[1500px] isolate absolute top-0 -z-10">
-        <div class="bg-noise w-full h-full" />
-        <div class="mix-blend-darken absolute top-0 w-full h-full bg-secondary" />
+    <div class="w-full h-fit isolate absolute top-0">
+        <div class="bg-noise w-full h-full absolute -z-10" />
+        <div class="mix-blend-darken absolute -z-10 w-full h-full bg-secondary" />
+        <div>
+            <slot />
+        </div>
     </div>
 </div>
 
 <style>
     .bg-noise {
-        background: radial-gradient(circle at 200vw 230vh, transparent 1vw, rgb(var(--color-bg))),
+        background: radial-gradient(circle at 250vw 230vh, rgb(var(--color-bg) / 0.1), rgb(var(--color-bg))),
             url('$lib/grain.svg');
-        filter: contrast(600%) brightness(100%) grayscale(0.9);
+        filter: contrast(900%) brightness(80%) grayscale(0.9);
     }
 </style>
