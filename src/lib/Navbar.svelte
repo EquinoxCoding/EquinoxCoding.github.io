@@ -1,42 +1,34 @@
 <script lang="ts">
-    import Logo from './Logo.svelte';
-    import HeaderLink from './NavbarLink.svelte';
+    import { quadOut } from 'svelte/easing';
+    import NavLink from './NavLink.svelte';
 
-    export let appearY: number;
-    let y: number;
-    let navbarHeight: number;
+    let scrollY: number;
+    let navHeight: number;
+    let screenHeight: number;
+    let isHovered = false;
+    $: navVisibility = quadOut(
+        Math.min(1, Math.max(0, (screenHeight + navHeight - scrollY) / navHeight / 2))
+    );
+    $: navY = isHovered ? 0 : (1 - navVisibility) * -navHeight;
+    $: hidden = navVisibility <= 0;
 </script>
 
-<svelte:window bind:scrollY={y} />
-<div class:pull-tab={y > appearY} class="absolute top-2 w-full pb-20" class:hide={y > navbarHeight}>
-    <nav
-        class="flex justify-around items-center z-10 mx-10 py-5 rounded-md"
-        style="background-color: rgb(42 40 42 / 0.5);"
-        bind:clientHeight={navbarHeight}
+<nav
+    class="w-screen pt-10 px-28 fixed top-0 z-10 transition-transform"
+    bind:clientHeight={navHeight}
+    on:mouseenter={() => isHovered = true}
+    on:mouseleave={() => isHovered = false}
+>
+    <div
+        class="w-full bg-light h-24 rounded-md shadow-sm flex items-center justify-center gap-16 transition-[translate] duration-300 translate-y-0"
+        style="translate: 0 clamp(-{navHeight}px, {navY}px, 0rem)"
     >
-        <HeaderLink>About</HeaderLink>
-        <HeaderLink>Events</HeaderLink>
-        <div class=" w-20 h-20">
-            <Logo />
-        </div>
-        <HeaderLink>Team</HeaderLink>
-        <HeaderLink>Contact</HeaderLink>
-    </nav>
-</div>
+        <NavLink href="#home" text="Home" />
+        <NavLink href="#about" text="About" />
+        <NavLink href="#faq" text="FAQ" />
+        <!-- <NavLink href="#sponsors" text="Sponsors" /> -->
+        <NavLink href="#team" text="Team" />
+    </div>
+</nav>
 
-<style>
-    .hide {
-        @apply opacity-0;
-    }
-
-    .pull-tab {
-        @apply transition-all sticky;
-        translate: 0 -8rem;
-        transition-duration: 250ms;
-    }
-
-    .pull-tab:hover {
-        @apply opacity-100;
-        translate: 0 0rem;
-    }
-</style>
+<svelte:window bind:scrollY bind:innerHeight={screenHeight} />

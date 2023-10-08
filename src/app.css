@@ -1,17 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    :root {
-        --color-bg: 121 101 120;
-        --color-primary: 240 228 220;
-        --color-secondary: 65 148 230;
-        --color-accent: 178 135 163;
-    }
-
-    body {
-        min-height: 100vh;
-        height: 100%;
-    }
+:root {
+    scroll-behavior: smooth;
 }
