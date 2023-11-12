@@ -7,7 +7,7 @@
     let screenHeight: number;
     let isHovered = false;
     $: navVisibility = (
-        Math.min(1, Math.max(0, (screenHeight + navHeight - scrollY) / navHeight / 2))
+        Math.min(1, Math.max(0, (screenHeight - scrollY) / navHeight / 2))
     );
     $: navY = isHovered ? 0 : (1 - navVisibility) * -navHeight;
 </script>
