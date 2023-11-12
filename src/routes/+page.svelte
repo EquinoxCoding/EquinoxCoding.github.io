@@ -4,8 +4,8 @@
         <h2 class="text-4xl text-dark-500 drop-shadow-xl">Jan 12-13, 2024 (virtual!)</h2>
     </div>
 </div>
-<div class="h-screen bg-neutral" id="about">
-    <div class="bg-light h-[550px] w-[60%] rounded-lg drop-shadow-xl relative top-20 left-32">
+<div class="py-24 bg-neutral" id="about">
+    <div class="ml-32 bg-light h-[550px] w-[60%] rounded-lg drop-shadow-xl">
 
     </div>
 </div>

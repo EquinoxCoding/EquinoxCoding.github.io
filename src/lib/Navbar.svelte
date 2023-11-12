@@ -6,17 +6,15 @@
     let navHeight: number;
     let screenHeight: number;
     let isHovered = false;
-    $: navVisibility = (
-        Math.min(1, Math.max(0, (screenHeight - scrollY) / navHeight / 2))
-    );
+    $: navVisibility = Math.min(1, Math.max(0, (screenHeight - scrollY) / navHeight / 2));
     $: navY = isHovered ? 0 : (1 - navVisibility) * -navHeight;
 </script>
 
 <nav
     class="w-screen pt-10 px-28 fixed top-0 z-10"
     bind:clientHeight={navHeight}
-    on:mouseenter={() => isHovered = true}
-    on:mouseleave={() => isHovered = false}
+    on:mouseenter={() => (isHovered = true)}
+    on:mouseleave={() => (isHovered = false)}
 >
     <div
         class="w-full bg-light h-24 rounded-md shadow-sm flex items-center justify-center gap-16 transition-[translate] duration-500"

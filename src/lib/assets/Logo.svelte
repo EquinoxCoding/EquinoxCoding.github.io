@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let colour: string = "#385d8f"
+	export let color: string = "#385d8f"
 
 </script>
 <svg
@@ -10,7 +10,7 @@
     x="0px"
     y="0px"
     viewBox="0 0 273.2 296.5"
-    style="enable-background:new 0 0 273.2 296.5; --color: {colour};"
+    style="enable-background:new 0 0 273.2 296.5; --color: {color};"
     xml:space="preserve"
 >
     <style type="text/css">
