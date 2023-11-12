@@ -1,5 +1,6 @@
 <script lang="ts">
     import NavLink from './NavLink.svelte';
+    import logo from './assets/logo gradient.png';
 
     let scrollY: number;
     let navHeight: number;
@@ -23,6 +24,9 @@
     >
         <NavLink href="#home" text="Home" />
         <NavLink href="#about" text="About" />
+        <a href="#home" class="h-16 block -mx-4">
+            <img src={logo} alt="Winter Hacks logo" class=" h-full select-none cursor-pointer" draggable="false" />
+        </a>
         <NavLink href="#faq" text="FAQ" />
         <!-- <NavLink href="#sponsors" text="Sponsors" /> -->
         <NavLink href="#team" text="Team" />

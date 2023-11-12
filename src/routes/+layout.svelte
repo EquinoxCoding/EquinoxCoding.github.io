@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>Equinox Coding</title>
+    <title>WinterHacks</title>
 </svelte:head>
 
 <Navbar />
