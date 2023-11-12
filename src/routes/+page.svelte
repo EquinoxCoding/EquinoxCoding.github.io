@@ -30,7 +30,7 @@
         bind:clientHeight={navbarAppearY}
         id="title"
     >
-        <h1 class="text-primary text-5xl font-serif">winterhacks dec. 2023</h1>
+        <h1 class="text-primary text-5xl font-serif">winterhacks jan. 2024</h1>
         <h2 class="text-primary text-4xl font-serif mt-2">coming soon</h2>
         {#each snowflakes as snowflake}
             <Snowflake {...snowflake} />
