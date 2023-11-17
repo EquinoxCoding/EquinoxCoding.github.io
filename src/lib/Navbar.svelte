@@ -1,35 +1,50 @@
 <script lang="ts">
     import NavLink from './NavLink.svelte';
     import Logo from './assets/Logo.svelte';
+    import Icon from "@iconify/svelte";
 
     let scrollY: number;
     let navHeight: number;
     let screenHeight: number;
+    let iconColor: string = "#3d3e45";
     let isHovered = false;
     $: navVisibility = Math.min(1, Math.max(0, (screenHeight - scrollY) / navHeight / 2));
     $: navY = isHovered ? 0 : (1 - navVisibility) * -navHeight;
 </script>
 
-<nav
+<div
     class="w-screen pt-10 px-28 fixed top-0 z-10"
     bind:clientHeight={navHeight}
     on:mouseenter={() => (isHovered = true)}
     on:mouseleave={() => (isHovered = false)}
+    role="banner"
 >
-    <div
-        class="w-full bg-light h-24 rounded-md shadow-sm flex items-center justify-center gap-16 transition-[translate] duration-500"
+    <nav
+        class="bg-light h-24 rounded-md shadow-sm transition-[translate] duration-500 grid px-24"
         style="translate: 0 clamp(-{navHeight}px, {navY}px, 0rem)"
     >
-        <NavLink href="#home" text="Home" />
-        <NavLink href="#about" text="About" />
-        <a href="#home" class="h-16 block w-16 -mx-4">
-            <Logo />
-            <!-- <img src={logo} alt="Winter Hacks logo" class=" h-full select-none cursor-pointer" draggable="false" /> -->
-        </a>
-        <NavLink href="#faq" text="FAQ" />
-        <!-- <NavLink href="#sponsors" text="Sponsors" /> -->
-        <NavLink href="#team" text="Team" />
-    </div>
-</nav>
+        <div class="col-start-2 flex items-center justify-center gap-16">
+            <NavLink href="#home" text="Home" />
+            <NavLink href="#about" text="About" />
+            <a href="#home" class="h-16 block w-16 -mx-4">
+                <Logo />
+            </a>
+            <NavLink href="#faq" text="FAQ" />
+            <!-- <NavLink href="#sponsors" text="Sponsors" /> -->
+            <NavLink href="#team" text="Team" />
+        </div>
+        <div class="h-full w-full mr-0 flex justify-between items-center">
+            <Icon icon="mdi:instagram" height="2.5rem" color={iconColor} />
+            <Icon icon="mdi:email-outline" height="2.7rem" color={iconColor} />
+            <Icon icon="mdi:linkedin" height="2.7rem" color={iconColor} />
+        </div>
+    </nav>
+</div>
 
 <svelte:window bind:scrollY bind:innerHeight={screenHeight} />
+
+<style>
+    nav {
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+</style>

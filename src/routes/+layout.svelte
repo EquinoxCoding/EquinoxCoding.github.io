@@ -3,9 +3,5 @@
     import '../app.css';
 </script>
 
-<svelte:head>
-    <title>WinterHacks</title>
-</svelte:head>
-
 <Navbar />
 <slot />
