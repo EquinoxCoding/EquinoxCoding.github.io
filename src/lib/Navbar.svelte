@@ -8,7 +8,8 @@
     let screenHeight: number;
     let iconColor: string = "#3d3e45";
     let isHovered = false;
-    $: navVisibility = Math.min(1, Math.max(0, (screenHeight - scrollY) / navHeight / 2));
+    $: navDisappearY = screenHeight * 0.8;
+    $: navVisibility = Math.min(1, Math.max(0, (navDisappearY - scrollY) / navHeight / 2));
     $: navY = isHovered ? 0 : (1 - navVisibility) * -navHeight;
 </script>
 
@@ -30,7 +31,7 @@
                 <Logo />
             </a>
             <NavLink href="#faq" text="FAQ" />
-            <!-- <NavLink href="#sponsors" text="Sponsors" /> -->
+            <NavLink href="#sponsors" text="Sponsors" />
             <NavLink href="#team" text="Team" />
         </div>
         <div class="h-full w-full mr-0 flex justify-between items-center">
