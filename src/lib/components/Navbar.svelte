@@ -1,6 +1,6 @@
 <script lang="ts">
     import NavLink from './NavLink.svelte';
-    import Logo from './assets/Logo.svelte';
+    import Logo from '../assets/Logo.svelte';
     import Icon from "@iconify/svelte";
 
     let scrollY: number;
@@ -35,9 +35,9 @@
             <NavLink href="#team" text="Team" />
         </div>
         <div class="h-full w-full mr-0 flex justify-between items-center">
-            <Icon icon="mdi:instagram" height="2.5rem" color={iconColor} />
-            <Icon icon="mdi:email-outline" height="2.7rem" color={iconColor} />
-            <Icon icon="mdi:linkedin" height="2.7rem" color={iconColor} />
+            <a href="https://www.instagram.com/winterh4cks/" target="_blank"><Icon icon="mdi:instagram" height="2.5rem" color={iconColor} /></a>
+            <a href="mailto:winterhacks@equinoxcoding.ca" target="_blank"><Icon icon="mdi:email-outline" height="2.7rem" color={iconColor} /></a>
+            <a href="https://www.linkedin.com/company/equinox-coding/" target="_blank"><Icon icon="mdi:linkedin" height="2.5rem" color={iconColor} /></a>
         </div>
     </nav>
 </div>
