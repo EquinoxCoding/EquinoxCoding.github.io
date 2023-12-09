@@ -24,12 +24,12 @@
         class="bg-light h-24 rounded-md shadow-sm transition-[translate] duration-500 grid px-24"
         style="translate: 0 clamp(-{navHeight}px, {navY}px, 0rem)"
     >
+    <a href="#home" class="h-full block w-16">
+        <Logo />
+    </a>
         <div class="col-start-2 flex items-center justify-center gap-16">
             <NavLink href="#home" text="Home" />
             <NavLink href="#about" text="About" />
-            <a href="#home" class="h-16 block w-16 -mx-4">
-                <Logo />
-            </a>
             <NavLink href="#faq" text="FAQ" />
             <NavLink href="#sponsors" text="Sponsors" />
             <NavLink href="#team" text="Team" />
