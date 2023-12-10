@@ -8,7 +8,7 @@
     let screenHeight: number;
     let iconColor: string = "#3d3e45";
     let isHovered = false;
-    $: navDisappearY = screenHeight * 0.8;
+    $: navDisappearY = screenHeight * 0.5;
     $: navVisibility = Math.min(1, Math.max(0, (navDisappearY - scrollY) / navHeight / 2));
     $: navY = isHovered ? 0 : (1 - navVisibility) * -navHeight;
 </script>
@@ -31,8 +31,8 @@
             <NavLink href="#home" text="Home" />
             <NavLink href="#about" text="About" />
             <NavLink href="#faq" text="FAQ" />
-            <NavLink href="#sponsors" text="Sponsors" />
-            <NavLink href="#team" text="Team" />
+            <!-- <NavLink href="#sponsors" text="Sponsors" /> -->
+            <!-- <NavLink href="#team" text="Team" /> -->
         </div>
         <div class="w-full mr-0 flex justify-between items-center">
             <a href="https://www.instagram.com/winterh4cks/" target="_blank"><Icon icon="mdi:instagram" height="2.5rem" color={iconColor} /></a>

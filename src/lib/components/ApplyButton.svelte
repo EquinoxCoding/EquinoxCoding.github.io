@@ -1,11 +1,14 @@
 <script lang="ts">
-    export let href: string;
-    export let text: string;
+    export let href = "https://forms.gle/c1NMhJPwZs59Dg72A";
+    export let text = "Apply Now";
+
+    let clazz = '';
+    export { clazz as class };
 </script>
 
 <a {href} target="_blank"
     ><button
-        class="bg-light py-3 px-8 rounded-3xl text-dark-700 text-lg drop-shadow-md hover:bg-dark-500 transition-colors hover:text-light"
+        class="py-3 px-8 rounded-3xl text-lg transition-colors {clazz}"
         >{text}</button
     ></a
 >
