@@ -21,10 +21,10 @@
     role="banner"
 >
     <nav
-        class="bg-light h-24 rounded-md shadow-sm transition-[translate] duration-500 grid px-24"
+        class="bg-light h-24 rounded-md shadow-sm transition-[translate] duration-500 grid px-24 items-center"
         style="translate: 0 clamp(-{navHeight}px, {navY}px, 0rem)"
     >
-    <a href="#home" class="h-full block w-16">
+    <a href="#home" class="w-14">
         <Logo />
     </a>
         <div class="col-start-2 flex items-center justify-center gap-16">
@@ -34,7 +34,7 @@
             <NavLink href="#sponsors" text="Sponsors" />
             <NavLink href="#team" text="Team" />
         </div>
-        <div class="h-full w-full mr-0 flex justify-between items-center">
+        <div class="w-full mr-0 flex justify-between items-center">
             <a href="https://www.instagram.com/winterh4cks/" target="_blank"><Icon icon="mdi:instagram" height="2.5rem" color={iconColor} /></a>
             <a href="mailto:winterhacks@equinoxcoding.ca" target="_blank"><Icon icon="mdi:email-outline" height="2.7rem" color={iconColor} /></a>
             <a href="https://www.linkedin.com/company/equinox-coding/" target="_blank"><Icon icon="mdi:linkedin" height="2.5rem" color={iconColor} /></a>
