@@ -56,7 +56,7 @@
     </div>
 </div>
 <div
-    class="py-24 bg-neutral flex items-center justify-center md:float-left md:w-1/2 md:p-8 p-4"
+    class="py-24 bg-neutral flex items-center justify-center md:float-left md:w-1/2 md:p-8 p-4 md:h-screen"
     id="about"
 >
     <div class="bg-light rounded-xl drop-shadow-xl p-8 md:p-12">
@@ -72,7 +72,7 @@
     </div>
 </div>
 
-<div class="bg-neutral flex items-center justify-center md:float-right md:w-1/2 md:p-8 p-4" id="faq">
+<div class="bg-neutral flex items-center justify-center md:float-right md:w-1/2 md:p-8 p-4 md:h-screen" id="faq">
     <div class="bg-light drop-shadow-xl p-8 md:p-12 rounded-xl">
         <h2 class="md:text-4xl text-3xl text-dark-700 text-center mb-8">FAQ</h2>
         <p class="flex gap-3 flex-col md:text-lg text-md">
