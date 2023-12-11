@@ -37,6 +37,7 @@
     "type": "module",
     "dependencies": {
         "@iconify-json/mdi": "^1.1.55",
-        "@iconify/json": "^2.2.143"
+        "@iconify/json": "^2.2.143",
+        "vite-imagetools": "^6.2.7"
     }
 }
