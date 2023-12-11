@@ -18,7 +18,7 @@
 <div
     class="w-screen md:pt-10 md:px-28 pt-7 px-5 fixed top-0 z-10"
     bind:clientHeight={navHeight}
-    on:mouseenter={() => (isHovered = true)}
+    on:mouseenter={() => (isHovered = screenWidth > 600)}
     on:mouseleave={() => (isHovered = false)}
     role="banner"
 >
