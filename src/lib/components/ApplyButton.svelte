@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let href = "https://forms.gle/c1NMhJPwZs59Dg72A";
+    export let href = "https://forms.gle/6GtEpddRhBZoA8neA";
     export let text = "Apply Now";
 
     let clazz = '';
