@@ -5,18 +5,20 @@ export default {
         fontFamily: {
             sans: ['Rubik', 'Calibri']
         },
-        extend: {
-            colors: {
-                dark: {
-                    300: '#828c8e',
-                    500: '#647279',
-                    700: '#3d3e45',
-                    900: '#27292f'
-                },
-                light: '#fffffa',
-                neutral: '#c5deda',
-                accent: '#63a1e8'
-            }
+        colors: {
+            'blue-1': 'var(--blue-1)',
+            'blue-2': 'var(--blue-2)',
+            'blue-3': 'var(--blue-3)',
+            dark: 'var(--dark)',
+            gray: 'var(--gray)',
+            'light-1': 'var(--light-1)',
+            'light-2': 'var(--light-2)',
+            'light-3': 'var(--light-3)',
+            'light-blue': 'var(--light-blue)',
+            'pink-1': 'var(--pink-1)',
+            'pink-2': 'var(--pink-2)',
+            'purple-1': 'var(--purple-1)',
+            'purple-2': 'var(--purple-2)'
         }
     },
     plugins: []

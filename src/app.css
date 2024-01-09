@@ -6,4 +6,17 @@
 
 :root {
     scroll-behavior: smooth;
+    --blue-1: rgba(142, 189, 233, 1);
+    --blue-2: rgba(135, 182, 226, 1);
+    --blue-3: rgba(136, 161, 198, 1);
+    --dark: rgba(72, 72, 72, 1);
+    --gray: rgba(110, 108, 122, 1);
+    --light-1: rgba(198, 231, 255, 1);
+    --light-2: rgba(225, 237, 255, 1);
+    --light-3: rgba(239, 245, 255, 1);
+    --light-blue: rgba(164, 216, 253, 1);
+    --pink-1: rgba(246, 215, 220, 1);
+    --pink-2: rgba(250, 207, 204, 1);
+    --purple-1: rgba(128, 135, 172, 1);
+    --purple-2: rgba(125, 123, 157, 1);
 }

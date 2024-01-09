@@ -17,7 +17,7 @@ const FAQ: Question[] = [
     },
     {
         question: 'Am I eligible to join?',
-        answer: 'All high school students are able to attend. All experience levels are welcome'
+        answer: 'All high school students are able to attend. All experience levels are welcome.'
     },
     {
         question: 'What do I need to participate?',

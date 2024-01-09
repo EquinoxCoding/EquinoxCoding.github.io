@@ -3,4 +3,4 @@
     export let text: string;
 </script>
 
-<a href={href} class="hover:font-bold text-lg text-dark-700">{text}</a>
+<a href={href} class="hover:font-bold text-lg text-dark">{text}</a>

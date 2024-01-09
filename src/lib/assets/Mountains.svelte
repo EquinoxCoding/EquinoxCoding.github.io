@@ -1,0 +1,31 @@
+<script lang="ts">
+    export let color: string = 'var(--light-1)';
+    export let width: number = 2060;
+    export let height: number = 668;
+
+    let clazz = '';
+    export { clazz as class };
+</script>
+
+<svg
+    width={width}
+    height={height}
+    viewBox="0 0 2060 668"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style="--color: {color}"
+>
+    <defs>
+        <style>
+            .cls-1 {
+                fill: var(--color);
+            }
+        </style>
+    </defs>
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M728.183 10.9687C746.449 -3.6562 772.416 -3.65623 790.682 10.9686L1500.02 578.886C1510.79 587.512 1516.64 598.694 1518.34 610.203L1212.37 667.917H50.0988C2.84461 667.917 -18.0389 608.42 18.849 578.886L728.183 10.9687ZM2059.85 508.059L1684.84 207.88C1677.54 202.031 1667.15 202.031 1659.85 207.88L1633.14 229.255C1621.82 238.32 1605.72 238.319 1594.4 229.252L1483.52 140.479C1465.25 125.854 1439.29 125.854 1421.02 140.479L1238.59 286.535C1223.09 298.944 1223.09 322.523 1238.59 334.933L1570.19 600.422L1797.77 557.494L2059.85 508.059Z"
+        class="cls-1 {clazz}"
+    />
+</svg>
